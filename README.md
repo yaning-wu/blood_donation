@@ -11,6 +11,8 @@ These files accompany a manuscript in preparation entitled "Impact of stratified
 This study evaluated strategies that deferred blood donors according to their estimated blood volume (EBV) and/or assigned donors to one of multiple collection volumes depending on their EBV and/or other factors. Detailed descriptions of evaluated strategies can be found at https://canva.link/swudi64240seq9v. 
 
 ## Files
+### Input strategy parameters
+* run_parameters_main
 ### DES functions and helper functions
 * des_main
 * des_psa
