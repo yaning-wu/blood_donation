@@ -21,9 +21,7 @@ extract_outcomes_des <- function(outcome_name, donorsex){
     outcome_name == "vvr" ~ sum(des_results$eligible_pulsevvr == 1 & des_results$time >= ifelse(donorsex == 1, 12, 16))/10,
     outcome_name == "collectvol under threshold" ~ sum(as.numeric(des_results$collectvol[des_results$time >= ifelse(donorsex == 1, 12, 16) & des_results$event %in% c("bleed under threshold")]))/10,
     outcome_name == "collectvol vvr" ~ sum(as.numeric(des_results$collectvol[des_results$time >= ifelse(donorsex == 1, 12, 16) & des_results$eligible_pulsevvr == 1]))/10,
-    outcome_name == "defer low ebv" ~ sum(des_results$event %in% c("dropout") & des_results$collectvol == 0)/10,
-    outcome_name == "morethantwo vvrs" ~ length(unique(des_results$donornum[des_results$total_vvrs > 2])),
-    outcome_name == "morethanthree vvrs" ~ length(unique(des_results$donornum[des_results$total_vvrs > 3]))
+    outcome_name == "defer low ebv" ~ sum(des_results$event %in% c("dropout") & des_results$collectvol == 0)/10
   )
   
   return(outcome)
